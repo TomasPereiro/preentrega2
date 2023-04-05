@@ -1,0 +1,210 @@
+body{background-color: black;
+    font-family: RobotoCondensed;
+}
+ ul{display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+
+    
+}
+li{padding: 10px;margin: 10px;
+}
+a{
+    text-decoration: none;
+    font-size: x-large;
+    font-style:initial;
+    color: whitesmoke;
+}
+
+p{
+    display:flex;flex-direction: column;
+    font-size: large;
+    color:beige;
+}
+h1{
+display: flex;   
+justify-content: center;
+color: antiquewhite;
+}
+h3,h2{
+    color: antiquewhite;
+    }
+footer{display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+}
+section{display: flex;
+flex-wrap: wrap;}
+
+.gridHome{display:grid;
+grid-template-columns: 30% 40% 30%;
+grid-template-rows:auto;
+grid-template-areas:
+". nav ." 
+"header header header"
+"main main main"
+"footer footer footer"
+}
+
+header{grid-area:header}
+main{grid-area:main;}
+nav{grid-area:nav}
+h1{grid-area:h1}
+section{grid-area:section}
+footer{grid-area:footer}
+
+.logo{
+    color: black;
+    background: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    font-family: fantasy;
+}
+
+.gridMain{display:grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows:auto;
+    
+    }
+    p{padding: 0px 20px
+    }
+
+
+    @font-face {
+        font-family: "RobotoCondensed";
+        src: url("../fonts/RobotoCondensed-Regular.ttf");
+        }
+
+
+
+
+
+
+
+
+    .gridMainServicios{
+        display:grid;
+        grid-template-columns: 70% 30%;
+        grid-template-rows:auto;
+        
+        }
+
+        .gridMainServicios ul{display:block;
+            color: whitesmoke;
+            list-style-type:circle;
+            
+        }
+
+        .gridMainNosotros{
+            display:grid;
+            grid-template-columns:50% 50%;
+            grid-template-rows:auto;
+            
+            }
+            .gridMainContacto{
+                display:grid;
+                grid-template-columns:100%;
+                grid-template-rows:auto;
+                
+                }
+
+
+
+        
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+    
+  }
+   
+  /* For Tablet View */
+  @media screen and (min-device-width: 768px)
+  and (max-device-width: 1024px) {
+    .gridMain{display:block;}
+    
+  }
+   
+  /* For Mobile Portrait View */
+  @media screen and (max-device-width: 480px)
+  and (orientation: portrait) {
+    .gridHome{
+        grid-template-areas:
+        "nav nav nav" 
+        "header header header"
+        "main main main"
+        "footer footer footer"
+        }
+
+        li {
+            padding: 5px;
+            margin: 3px;
+        }
+
+        .gridMain{display:block;}
+
+        a{
+            font-size: large
+        }
+        .gridMainServicios{
+            display: block;
+        }
+   
+  }
+   
+  /* For Mobile Landscape View */
+  @media screen and (max-device-width: 768px)
+  and (orientation: landscape) {
+    .gridHome{
+        grid-template-areas:
+        "nav nav nav" 
+        "header header header"
+        "main main main"
+        "footer footer footer"
+        }
+
+        li {
+            padding: 5px;
+            margin: 3px;
+        }
+
+        .gridMain{display:block;}
+        a{
+            font-size: large
+        }
+        .gridMainServicios{
+            display: block;
+        }
+   
+  }
+   
+  /* For Mobile Phones Portrait or Landscape View */
+  @media screen and (max-device-width: 768px) {
+    .gridHome{
+        grid-template-areas:
+        "nav nav nav" 
+        "header header header"
+        "main main main"
+        "footer footer footer"
+        }
+
+        li {
+            padding: 5px;
+            margin: 3px;
+        }
+
+        .gridMain{display:block;}
+        a{
+            font-size: large
+        }
+        .gridMainServicios{
+            display: block;
+        }
+  }
+
